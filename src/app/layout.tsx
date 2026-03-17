@@ -8,9 +8,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PRISM Spine Calculator",
+  title: "PRISM | Prognostic Index for Spinal Metastases",
   description:
-    "PRISM (Prognostic Index for Spinal Metastases) calculator for spine SBRT patients.",
+    "Calculate the PRISM score for patients receiving spinal stereotactic radiosurgery. A validated prognostic index stratifying survival into four groups based on performance status, disease burden, and treatment history.",
+  keywords: ["PRISM", "spine SBRT", "spinal metastases", "prognostic index", "stereotactic radiosurgery", "survival stratification"],
 };
 
 export default function RootLayout({

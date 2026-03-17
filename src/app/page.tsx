@@ -168,7 +168,7 @@ export default function Home() {
             Prognostic Index for<br className="hidden sm:block" /> Spinal Metastases
           </h1>
           <p className="max-w-2xl text-base leading-relaxed text-gray-500">
-            A validated prognostic tool for patients receiving spine SBRT. Developed at Mayo Clinic, externally validated at MD Anderson Cancer Center.
+            A validated composite scoring system for stratifying survival in patients treated with spinal stereotactic radiosurgery, integrating performance status, disease burden, and treatment history into four prognostic groups.
           </p>
         </section>
 
@@ -297,13 +297,35 @@ export default function Home() {
           className={`rounded-2xl border border-gray-200 bg-gray-50 p-8 sm:p-10 ${about.isVisible ? "fade-in-up fade-delay-2" : "opacity-0 translate-y-3"}`}
         >
           <h2 className="text-xl font-semibold text-gray-900">About PRISM</h2>
-          <div className="mt-4 space-y-3 text-sm leading-relaxed text-gray-600">
+          <div className="mt-4 space-y-4 text-sm leading-relaxed text-gray-600">
             <p>
-              PRISM (Prognostic Index for Spinal Metastases) is a validated prognostic model for patients undergoing stereotactic body radiation therapy to the spine. It combines readily available clinical variables into a composite score to stratify outcomes into four prognostic groups.
+              PRISM (Prognostic Index for Spinal Metastases) is a prognostic scoring system for patients undergoing spinal stereotactic radiosurgery (SSRS). It was developed to address a gap in outcome stratification for this population, where existing tools often lack specificity for the SBRT context.
             </p>
             <p>
-              The model was developed at Mayo Clinic and externally validated in MD Anderson Cancer Center cohorts. It is intended to support clinical discussions and treatment planning rather than replace clinical judgment.
+              The index combines six readily available clinical variables -- sex, ECOG performance status, prior surgery, prior radiation, metastatic disease burden, and time from diagnosis to metastasis -- into a composite score. Patients are stratified into four groups with distinct survival profiles, ranging from excellent (Group 1, score &gt;7) to poor (Group 4, score &lt;1).
             </p>
+            <p>
+              The model was internally validated using a single-institution cohort and subsequently externally validated in an independent multi-institutional cohort, demonstrating consistent prognostic discrimination across both populations. On multivariable analysis, ECOG performance status, sex, number of involved organ systems, and treatment latency were the strongest independent predictors of overall survival.
+            </p>
+            <h3 className="text-base font-semibold text-gray-800 pt-2">Intended Use</h3>
+            <p>
+              PRISM is designed as a clinical decision-support tool to facilitate discussions around treatment intensity, follow-up scheduling, and goals-of-care conversations. It is not intended to replace clinical judgment or dictate treatment decisions in isolation.
+            </p>
+            <h3 className="text-base font-semibold text-gray-800 pt-2">References</h3>
+            <ol className="list-decimal list-inside space-y-2 text-xs text-gray-500">
+              <li>
+                Jensen G, Tang C, Hess K, Bishop A, Pan HY, Li J, Yang J, Tannir N, Amini B, Tatsui C, Rhines L, Brown P, Ghia A.
+                Internal validation of the prognostic index for spine metastasis (PRISM) for stratifying survival in patients treated with spinal stereotactic radiosurgery.
+                <span className="italic">Int J Radiat Oncol Biol Phys.</span> 2017;97(4):E81.{" "}
+                <a href="https://doi.org/10.1016/j.ijrobp.2017.02.085" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">DOI</a>
+              </li>
+              <li>
+                Florez MA, De B, Kowalchuk R, Tang C, Bishop A, Kouzy R, Amini B, Briere T, Beckham T, Wang C, Li J, Tatsui C, Rhines L, Brown PD, Merrell K, Ghia A.
+                Validation of the prognostic index for spine metastasis (PRISM) for stratifying survival in patients treated with spinal stereotactic body radiation.
+                <span className="italic">Radiother Oncol.</span> 2024;201:110570.{" "}
+                <a href="https://doi.org/10.1016/j.radonc.2024.110570" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">DOI</a>
+              </li>
+            </ol>
           </div>
         </section>
 
@@ -315,7 +337,7 @@ export default function Home() {
         >
           <details className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 shadow-sm">
             <summary className="cursor-pointer list-none text-base font-semibold text-gray-900 flex items-center justify-between">
-              Reference -- Cox Regression Table (Mayo Cohort)
+              Supplemental Data -- Overall Survival Cox Proportional Hazard Analysis
               <svg className="h-5 w-5 text-gray-400 transition-transform details-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </summary>
             <div className="mt-6 overflow-x-auto">
@@ -349,10 +371,10 @@ export default function Home() {
       <footer className="border-t border-gray-100 bg-gray-50 px-6 py-8 text-xs text-gray-400 sm:px-10">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-2">
           <p>
-            This tool is for educational and clinical decision-support purposes only. It does not constitute medical advice. Clinical decisions should be made by qualified professionals using the full clinical context.
+            This calculator is provided for educational and clinical decision-support purposes only. It does not constitute medical advice. Treatment decisions should be made by the treating physician in the context of the individual patient.
           </p>
-          <p>
-            PRISM -- Prognostic Index for Spinal Metastases. Mayo Clinic development, MD Anderson external validation.
+          <p className="mt-1">
+            Jensen et al. <span className="italic">IJROBP</span> 2017;97(4):E81 | Florez, De, Kowalchuk et al. <span className="italic">Radiother Oncol</span> 2024;201:110570
           </p>
         </div>
       </footer>
